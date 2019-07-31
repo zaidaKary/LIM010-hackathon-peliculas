@@ -12,12 +12,26 @@
 
 <body>
     <header class="site-header">
-        <img class="logo" src="#" alt="Logo">   
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <a class="navbar-brand" href="#">LOGO</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Link</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </nav>   
     </header>
     <main>
         <section id="slider-view">
-            <div class="container-slider">
-            </div>
         </section>
         <section id="home-view">
             <div class="bg-home">
@@ -36,14 +50,18 @@
                 </div>
             </div>
             <!-- input de buscador-->
-            <input type="text" id="search" placeholder="Ingresar nombre de película..." size="50"/>
+            <nav class="navbar navbar-light justify-content-center">
+                    <form class="form-inline">
+                      <input class="form-control mr-sm-2" type="search" placeholder="Ingrese el nombre de la película..." aria-label="Search" size="50">
+                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+            </nav>
             <div id="container display">
                 <!-- aqui mostraremos las películas -->
             </div>
         </section>
     </main>
     <footer>
-
     </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
