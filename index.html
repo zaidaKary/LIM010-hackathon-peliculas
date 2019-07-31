@@ -10,16 +10,45 @@
 </head>
 
 <body>
-    <header>
-        <div id="header-principal"></div>
+    <header class="site-header">
+        <img class="logo" src="#" alt="Logo">
+        <div class="bar">
+            <nav>
+                <select name="" id="">
+                    <option value="" disabled selected>Peliculas</option>
+                    <option value="">Comedia</option>
+                    <option value="">Drama</option>
+                </select>
+                <select name="" id="">
+                        <option value="" disabled selected>Idioma</option>
+                        <option value="">Español</option>
+                        <option value="">Ingles</option>
+                </select>
+            </nav>
+        </div>     
     </header>
     <main>
-        <div id="start-view">
-        </div>
-        <div id="secondary-view">
-        </div>
-        <div id="secondary-view">
-        </div>
+        <section id="slider-view">
+            <div class="container-slider">
+            </div>
+        </section>
+        <section id="home-view">
+            <div class="bg-home">
+                <div class="container-movies"></div>
+                <div id="movie-modal" class="modal">
+                    <div class="flex" id="flex">
+                        <div class="container-modal">
+                            <div class="modal-header flex">
+                              <span class="close" id="close">&times;</span>
+                            </div>
+                            <div id="movie-detail" class="modal-body">
+                                <h2>Detalles de la Película</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
 
