@@ -64,9 +64,9 @@ plugins, etc).
 
 |       | Miércoles               | Jueves                       | Viernes                 | 
 |------ | ------------------------| ---------------------------- | ----------------------- | 
-| 8:00  | Kick off hackaton       | Daily por squad              | Hackeo                  |      
-| 9:00  | Sesión de planificación | Hackeo                       | Hackeo                  | 
-| 10:00 | Hackeo                  | Compartir link de aplicación | Detalles finales        |
+| 8:00  | Kick off hackaton       | Daily por squad              | Hacking                 |      
+| 9:00  | Sesión de planificación | Hacking                      | Hacking                 | 
+| 10:00 | Hacking                 | Compartir link de aplicación | Detalles finales        |
 | 11:00 |                         | Presentación y Feedback      | Feria de demostraciones |    
 | 12:00 |                         |                              | Deliberación            |                  
 
