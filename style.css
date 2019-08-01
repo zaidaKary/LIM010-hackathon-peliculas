@@ -1,0 +1,66 @@
+html {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    color: #ffffff;
+    background-color: #333333;
+    margin: 0 auto;
+}
+h1 {
+    color: #ffffff;
+    text-shadow: 1px 2px 2px rgba(51,51,51,0.91);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+}
+.display-3 {
+    font-weight: 700;
+}
+h2 {
+    color: #ffffff;
+    font-size: 35px;
+    line-height: 2.5rem;
+    font-weight: 800;
+    text-shadow: 1px 2px 2px rgba(51,51,51,0.91);
+  }
+h3 {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 1.5rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    text-shadow: 1px 2px 2px rgba(51,51,51,0.91);
+}
+
+.site-header {
+    margin: 0 auto;
+    background-image: url(img/bg-home-1.jpg);
+    height: 100vh;
+    background-position: top center;
+    background-size: cover;
+  }
+.text-header {
+    padding-top: 200px;
+}
+.navbar {
+    background-color: #00000057;
+}
+.form-control {
+    background-color: #ffffff2e;
+}
+
+/*Utilities*/
+.container {
+    width: 98%;
+    margin: 0 auto;
+  }
+ 
+  .center-text {
+    text-align: center;
+    max-width: 700px;
+    margin: 15px auto 10px;
+  }
