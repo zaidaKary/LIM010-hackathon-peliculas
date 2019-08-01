@@ -1,3 +1,6 @@
+//Valor del input buscar
+const search = document.getElementById('search');
+
 const allMovies = document.getElementById('home-view');
 const objMovies=['Captain America: The First Avenger','Iron Man','The Incredible Hulk','Iron Man 2','Thor','The Avengers','Iron Man 3',
 'Thor: The Dark World','Captain America: The Winter Soldier','Guardians of the Galaxy',
@@ -42,3 +45,11 @@ const showMovies = (aux) => {
 };
 
 console.log(showMovies(aux));
+
+const searchMoviesByName = (dataAllMovies, letter) => {
+    return dataAllMovies.filter(objeto => objeto.Title.toLowerCase().startsWith(letter));
+  };
+  search.addEventListener('input', event => {
+    const movieSought = searchMoviesByName(aux, event.target.value.toLowerCase());
+    allMovies.innerHTML = showMovies(movieSought);
+  });
