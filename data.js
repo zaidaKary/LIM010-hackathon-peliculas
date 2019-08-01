@@ -15,3 +15,8 @@ let movie;
       }) 
       .catch(err => (err))
 //}
+
+
+let inputSearch=document.getElementById("search");
+let containerOutput=document.getElementById("container display");
+const btnSearch = document.getElementById('button-search');
