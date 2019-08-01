@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 /* variables de manejo del DOM */
+=======
+//Valor del input buscar
+const search = document.getElementById('search');
+
+>>>>>>> 1c3a70c9cb6674db0dad1593ba03abe73ec924e6
 const allMovies = document.getElementById('home-view');
 const phase1 = document.getElementById('phase-1');
 const phase2 = document.getElementById('phase-2');
@@ -42,6 +48,7 @@ for (let i = 0; i < objMovies.length; i++) {
 const showMovies = (aux) => {
   let viewMovie = '';
   for (let i in aux) {
+<<<<<<< HEAD
     viewMovie = viewMovie + `
      <div id="printMovies" class="card col-lg-3 col-md-6 col-sm-12">
       <div class="card-body bd-dark style="width = 20rem;">
@@ -50,12 +57,33 @@ const showMovies = (aux) => {
         <h5 id="product-name" >Title: ${aux[i].Title}</h5>
         <h6 id="product-name" >Genre: ${aux[i].Genre}</h6>
         <h6 id="product-name" >Year: ${aux[i].Year}</h6>
+=======
+     viewMovie = viewMovie + `
+     <div id="printMovies" class="col-md-3">
+      <div class="card well text-center">
+        <img src="${aux[i].Poster}" class="card-img-top" alt="${aux[i].Title}">
+        <div class="card-body">
+          <h5 id="product-name" class="card-title"> ${aux[i].Title}</h5>
+          <h6 id="product-name">(${aux[i].Year})</h6>
+          <h6 id="product-name"><small class="text-muted">${aux[i].Genre}</small></h6>
+>>>>>>> 1c3a70c9cb6674db0dad1593ba03abe73ec924e6
         </div>
       </div>
-     </div>
      </div>
      `
   };
   return (viewMovie);
 };
 
+<<<<<<< HEAD
+=======
+console.log(showMovies(aux));
+
+const searchMoviesByName = (dataAllMovies, letter) => {
+    return dataAllMovies.filter(objeto => objeto.Title.toLowerCase().startsWith(letter));
+  };
+  search.addEventListener('input', event => {
+    const movieSought = searchMoviesByName(aux, event.target.value.toLowerCase());
+    allMovies.innerHTML = showMovies(movieSought);
+  });
+>>>>>>> 1c3a70c9cb6674db0dad1593ba03abe73ec924e6

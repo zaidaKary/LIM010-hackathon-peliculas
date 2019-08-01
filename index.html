@@ -15,7 +15,7 @@
 
 <body>
 	<header class="site-header">
-		<nav class="navbar navbar-expand-lg navbar-dark">
+		<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
 			<a class="navbar-brand" href="#">
 				<img src="img/logo-2.png" alt="">
 			</a>
@@ -25,11 +25,14 @@
 			</button>
 			<!-- input de buscador-->
 			<form class="form-inline justify-content-center">
-				<input class="form-control mr-sm-2" type="search" placeholder="Ingrese el nombre de la película..."
+				<input id="search" class="form-control mr-sm-2" type="search" placeholder="Ingrese el nombre de la película..."
 					aria-label="Search" size="50">
 			</form>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#">Inicio <span class="sr-only"></span></a>
+					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#">Inicio</a>
 					</li>
@@ -58,7 +61,7 @@
 	<main>
 		<section id="slider-view">
 		</section>
-		<section id="home-view">
+		<section id="home-view" class="container well row">
 			<div class="bg-home">
 				<div class="container-movies"></div>
 				<div id="movie-modal" class="modal">
@@ -73,10 +76,6 @@
 						</div>
 					</div>
 				</div>
-			</div>
-
-			<div id="container display">
-				<!-- aqui mostraremos las películas -->
 			</div>
 		</section>
 	</main>
