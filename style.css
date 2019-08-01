@@ -46,8 +46,8 @@ h5 {
 .site-header {
     margin: 0 auto;
     background-image: url(img/bg-home-1.jpg);
-    height: 100vh;
-    background-position: top center;
+    height: 600px;
+    background-position: center;
     background-size: cover;
   }
 .text-header {
@@ -70,11 +70,13 @@ h5 {
 #printMovies img {
     width: 100%;
 }
-#printMovies .col-md-3 .well {
-    height: 390px;
-}
-#printMovies .col-md-3 img {
-    height: 249px;
+@mendia (min-width:960px){
+    #printMovies .col-md-3 .well {
+        height: 250px;
+    }
+    #printMovies .col-md-3 img {
+        height: 250px;
+    }
 }
 
 /*Utilities*/
