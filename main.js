@@ -44,14 +44,14 @@ for (let i = 0; i < objMovies.length; i++) {
 const showMovies = (aux) => {
   let viewMovie = '';
   for (let i in aux) {
-    viewMovie = viewMovie + `
-     <div id="printMovies" class="card col-lg-3 col-md-6 col-sm-12">
-      <div class="card-body bd-dark style="width = 20rem;">
+     viewMovie = viewMovie + `
+     <div id="printMovies" class="col-md-3">
+      <div class="card well text-center">
         <img src="${aux[i].Poster}" class="card-img-top" alt="${aux[i].Title}">
         <div class="card-body">
-        <h5 id="product-name" >Title: ${aux[i].Title}</h5>
-        <h6 id="product-name" >Genre: ${aux[i].Genre}</h6>
-        <h6 id="product-name" >Year: ${aux[i].Year}</h6>
+          <h5 id="product-name" class="card-title"> ${aux[i].Title}</h5>
+          <h6 id="product-name">(${aux[i].Year})</h6>
+          <h6 id="product-name"><small class="text-muted">${aux[i].Genre}</small></h6>
         </div>
       </div>
      </div>
