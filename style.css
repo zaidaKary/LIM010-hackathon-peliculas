@@ -42,7 +42,6 @@ h5 {
     color: #928f8f!important;
 }
 
-
 .site-header {
     margin: 0 auto;
     background-image: url(img/bg-home-1.jpg);
@@ -67,11 +66,25 @@ h5 {
     background-color: #484747;
 }
 
-#printMovies img {
-    width: 100%;
+.hide {
+    display: none;
 }
 
-
+.color-label {
+    color: black;
+}
+.margin-input {
+    margin-bottom: 18px;
+}
+.modal-title {
+    color: black;
+}
+.button-home {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 13px;
+    margin-top: 13px;
+}
 /*Utilities*/
 .container {
     width: 98%;
