@@ -25,26 +25,32 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
-						<a class="nav-link" id="home">Inicio <span class="sr-only"></span></a>
-					</li>
 					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-							aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Saga
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item letter-color" id="cap-america">Captain America</a>
+                            <a class="dropdown-item letter-color" id="iron-man">Iron Man</a>
+							<a class="dropdown-item letter-color" id="the-avenger">The Avengers</a>
+							<a class="dropdown-item letter-color" id="thor">Thor</a>
+							<a class="dropdown-item letter-color" id="guardians">Guardians of the Galaxy</a>
+							<a class="dropdown-item letter-color" id="spider">Spider-Man</a>
+                        </div>
+                      </li>
+            
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							Fase
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" id="phase-1">Fase 1</a>
-							<a class="dropdown-item" id="phase-2">Fase 2</a>
-							<a class="dropdown-item" id="phase-3">Fase 3</a>
+							<a class="dropdown-item letter-color" id="phase-1">Fase 1</a>
+							<a class="dropdown-item letter-color" id="phase-2">Fase 2</a>
+							<a class="dropdown-item letter-color" id="phase-3">Fase 3</a>
 						</div>
 					</li>
-
-					<li class="nav-item">
-						<a class="nav-link" id="saga">Saga</a>
-					</li>
 					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="select-age" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<a class="nav-link" href="#home-age" id="select-age" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						  Año de estreno
 						</a>
 					  </li>
@@ -53,9 +59,6 @@
 							<a  type="submit" id="select-ano" class="dropdown-item" href="#"></a>
 						</div>
 					  </div>
-					<li class="nav-item">
-						<a class="nav-link" id="sign-off">Cerrar Sesión<span class="sr-only"></span></a>
-					</li>
 				</ul>
 				<!-- input de buscador-->
 			<form class="form-inline justify-content-center">
@@ -80,8 +83,18 @@
 					</div>
 				</div>
 				<div class="carousel-item" style="background-image: url(img/slider-1.jpg);">
+					<div class="carousel-caption text-center">
+							<h1>Bienvenido al UCM</h1>
+							<h3>Parte del viaje, es el final</h3>
+							<a class="btn btn-outline-light btn-lg" href="#home-view">Inicia el viaje</a>
+						</div>
 				</div>
 				<div class="carousel-item" style="background-image: url(img/slider-3.jpg);">
+					<div class="carousel-caption text-center">
+							<h1>Bienvenido al UCM</h1>
+							<h3>Parte del viaje, es el final</h3>
+							<a class="btn btn-outline-light btn-lg" href="#home-view">Inicia el viaje</a>
+						</div>
 				</div>
 			</div>
 			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -95,7 +108,8 @@
 		</div>
 	</header>
 	<main>
-		<section id="home-view" class="container well row offset">
+		<section id="home-view" class="container well row offset" style="justify-content: center; padding-top: 82px;">
+			<div id="home-age"></div>
 			<div class="bg-home">
 				<div class="container-movies"></div>
 				<div id="movie-modal" class="modal">

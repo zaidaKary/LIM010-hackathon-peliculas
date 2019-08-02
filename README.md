@@ -21,7 +21,7 @@
 Se realizará una aplicación web que permita consultar la información relevante sobre el UCM (Universo cinematográfico de Marvel). La consulta incluirá la información de las películas de la franquicia Marvel estreanadas hasta la actualidad. También, el usuario podrá acceder a las opciones de filtrar las películas por fecha de estreno, saga de cada super heroe y fases cronológicas segun la línea de tiempo de las películas.
 
 ## Imagen del proyecto
-![img-01](img-rm/img-01.jpg)
+![img-01](img-rm/img-001.jpg)
 ## Investigación UX
 
 ### Usuario
@@ -97,23 +97,18 @@ En el feedback realizado se indicó:
 - El usuario también propusieron que el menú y los filtros se deberian mostrar siempre para facilitar las busqueda, para ello se creo un menú pegajoso.
 
 ### Prototipo alta fidelidad
-[Prototipo en Figma](https://www.figma.com/file/2uV1blI0ANV3O6S4R6GDgT/DataLovers-PokeData-Go?node-id=1%3A2)
 
 #### Desktop Home
-
-![img-05](img-rm/img-05.jpg)
 
 
 
 #### Dispositivo Mobile
 
-![img-07](img-rm/img-07.jpg)
-
 
 
 #### Dispositivo Tablet
 
-![img-08](img-rm/img-08.jpg)
+
 
 
 

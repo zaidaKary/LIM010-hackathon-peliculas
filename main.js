@@ -1,12 +1,19 @@
 //Valor del input buscar
 const search = document.getElementById('search');
 
+const inicio = document.getElementById('inicio');
 const allMovies = document.getElementById('home-view');
 const selectAnoEstreno = document.getElementById('select-ano');
 const sliderView = document.getElementById('slider-view');
 const phase1 = document.getElementById('phase-1');
 const phase2 = document.getElementById('phase-2');
 const phase3 = document.getElementById('phase-3');
+const capAmerica = document.getElementById('cap-america');
+const ironMan = document.getElementById('iron-man');
+const theAvenger = document.getElementById('the-avenger');
+const thor = document.getElementById('thor');
+const guardians = document.getElementById('guardians');
+const spider = document.getElementById('spider');
 
 const signOff = document.getElementById('sign-off');
 
@@ -27,32 +34,54 @@ const objMovies = ['Captain America: The First Avenger', 'Iron Man', 'The Incred
 let aux = [];
 let movie;
 for (let i = 0; i < objMovies.length; i++) {
-  movie = `http://www.omdbapi.com/?t=${encodeURI(objMovies[i])}&apikey=1aca2bd9`;
+  movie = `https://www.omdbapi.com/?t=${encodeURI(objMovies[i])}&apikey=1aca2bd9`;
   fetch(movie)
     .then(response => response.json())
     .then(data => {
       localStorage.setItem('data', JSON.stringify(data))
       aux.push(data);
       allMovies.innerHTML = showMovies(aux);
+      /*inicio.addEventListener('click', () =>{
+        allMovies.innerHTML = showMovies(aux);
+      });*/
+     
       //Funciónes para filtar por Fase
-      phase3.addEventListener('click', () => {
-        allMovies.innerHTML = showMovies(filterForPhase3(aux));
-      });
       phase1.addEventListener('click', () => {
         allMovies.innerHTML = showMovies(filterForPhase1(aux));
       });
       phase2.addEventListener('click', () => {
         allMovies.innerHTML = showMovies(filterForPhase2(aux));
       });
-      // Funcion para mostrar los tipos
-      const anoEstreno=paintAno(aux);
-      paintListAno(anoEstreno, selectAnoEstreno);
-
-      // Funcion de prueba para botones de año
-      const selectMenuAge=document.getElementById("select-age");
-      selectMenuAge.addEventListener('click', () => {
-      let newListMovie =  paintListAno(anoEstreno, allMovies);
+      phase3.addEventListener('click', () => {
+        allMovies.innerHTML = showMovies(filterForPhase3(aux));
       });
+      //Funciones para filtrar por saga
+      capAmerica.addEventListener('click', () => {
+        allMovies.innerHTML = showMovies(filterForSaga(aux,'Captain America'));
+      });
+      ironMan.addEventListener('click', () => {
+        allMovies.innerHTML = showMovies(filterForSaga(aux,'Iron Man'));
+      });
+      theAvenger.addEventListener('click', () => {
+        allMovies.innerHTML = showMovies(filterForSaga(aux,'The Avengers'));
+      });
+      thor.addEventListener('click', () => {
+        allMovies.innerHTML = showMovies(filterForSaga(aux,'Thor'));
+      });
+      guardians.addEventListener('click', () => {
+        allMovies.innerHTML = showMovies(filterForSaga(aux,'Guardians of the Galaxy'));
+      });
+      spider.addEventListener('click', () => {
+        allMovies.innerHTML = showMovies(filterForSaga(aux,'Spider-Man'));
+      });
+      // Funcion para mostrar los tipos
+     const anoEstreno=paintAno(aux);
+     paintListAno(anoEstreno, selectAnoEstreno);
+     // Funcion de prueba para botones de año
+     const selectMenuAge=document.getElementById("select-age");
+     selectMenuAge.addEventListener('click', () => {
+      paintListAno(anoEstreno, allMovies);
+     });
     })
     .catch(err => (err))
     
@@ -87,44 +116,6 @@ const searchMoviesByName = (dataAllMovies, letter) => {
     const movieSought = searchMoviesByName(aux, event.target.value.toLowerCase());
     allMovies.innerHTML = showMovies(movieSought);
   });
-
-// Cerrar sesion 
-signOff.addEventListener('click', () => {
-  sliderView.classList.remove('hide');
-});
-
-// Funcionalidad del Boton Ingresar
-let contador = 3;
-getIn.addEventListener('click', () => {
-  if (password.value === '' && user.value === '') {
-    passwordError.innerHTML = '<strong>Por favor, ingrese su usuario y contraseña.</strong>';
-  } else if (password.value === '') {
-    passwordError.innerHTML = '<strong>Por favor, ingrese su contraseña.</strong>';
-    user.value = '';
-  } else if (user.value === '') {
-    passwordError.innerHTML = '<strong>Por favor, ingrese su usuario.</strong>';
-    password.value = '';
-  } else if (user.value === 'LABORATORIA' && password.value === 'LABORATORIA') {
-    sliderView.classList.add('hide');
-    homeView.classList.remove('hide');
-    siteHeader.classList.remove('hide');
-  } else {
-    if (contador === 0) {
-      user.value = '';
-      password.value = '';
-      user.disabled=true;
-      password.disabled=true;
-      passwordError.innerHTML = '<strong>No te quedan más intento(s).</strong>';
-    } else {
-      passwordError.innerHTML = '<strong>Datos incorrectos, le quedan ' + contador + ' intento(s).</strong>';
-      user.value = '';
-      password.value = '';
-      contador--;
-    }
-  }
-});
-
-
 // Funcion para pintar  los años
 const paintAno = (listMovie) => {
   let newData = [];
@@ -141,7 +132,7 @@ const paintAno = (listMovie) => {
 const paintListAno = (data, container) => {
   let template = '';
   for (let i = 0; i < data.length; i++) { 
-    template += `<button type="sumit" onclick="anio(${data[i]})" id="${data[i]}" value="${data[i]}"> ${data[i].toUpperCase()}</button>`;    
+    template += `<div class="button"><button style="margin-left: 11px;" class="btn btn-info" type="sumit" onclick="anio(${data[i]})" id="${data[i]}" value="${data[i]}"> ${data[i].toUpperCase()}</button><div>`;    
   }
   container.innerHTML = template;
 };
