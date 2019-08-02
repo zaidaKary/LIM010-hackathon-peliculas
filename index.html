@@ -14,7 +14,7 @@
 </head>
 
 <body>
-	<header class="site-header">
+	<header id ="site-header" class="site-header hide">
 		<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
 			<a class="navbar-brand" href="#">
 				<img src="img/logo-2.png" alt="">
@@ -23,32 +23,39 @@
 				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			<!-- input de buscador-->
-			<form class="form-inline justify-content-center">
-				<input id="search" class="form-control mr-sm-2" type="search" placeholder="Ingrese el nombre de la película..."
-					aria-label="Search" size="50">
-			</form>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item">
+<<<<<<< HEAD
 						<a class="nav-link" href="#">Inicio <span class="sr-only"></span></a>
+=======
+						<a class="nav-link" id="home">Inicio <span class="sr-only"></span></a>
+>>>>>>> d87d5b9e30b67966c893634fc529336a7ae56532
 					</li>
 					<li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          FASE
+                          Fase
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" id="phase-1">FASE 1</a>
-                          <a class="dropdown-item" id="phase-2">FASE 2</a>
-                          <a class="dropdown-item" id="phase-3">FASE 3</a>
+                          <a class="dropdown-item" id="phase-1">Fase 1</a>
+                          <a class="dropdown-item" id="phase-2">Fase 2</a>
+                          <a class="dropdown-item" id="phase-3">Fase 3</a>
                         </div>
                       </li>
             
 					<li class="nav-item">
 						<a class="nav-link" id="saga">Saga</a>
 					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="sign-off">Cerrar Sesión<span class="sr-only"></span></a>
+					</li>
 				</ul>
 			</div>
+			<!-- input de buscador-->
+			<form class="form-inline justify-content-center">
+				<input id="search" class="form-control mr-sm-2" type="search" placeholder="Ingrese el nombre de la película..."
+					aria-label="Search" size="50">
+			</form>
 		</nav>
 		<div class="text-header">
 			<h1 class="display-3 center-text">MARVEL UCM</h1>
@@ -57,8 +64,63 @@
 	</header>
 	<main>
 		<section id="slider-view">
+		<!-- Button modal -->
+		<div class="button-home">
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Iniciar Sesión</button>
+		</div>
+		<!-- Modal -->
+	  	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title">Inicia Sesión en Marvel Fan</h5>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<div class="modal-body">
+				<label class="color-label">USUARIO:</label>
+				<input type="text" class="form-control margin-input" id="user" aria-describedby="emailHelp" placeholder="Ingrese usuario...">
+				<label class="color-label">CONTRASEÑA:</label>
+				<input type="password" class="form-control margin-input" id="password" placeholder="Ingrese contraseña...">
+				<p id="password-error" class="color-label"></p>
+			</div>
+			<div class="modal-footer justify-content-center">
+			  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+			  <button type="button" class="btn btn-primary" id="get-in">Ingresar</button>
+			</div>
+		  </div>
+		</div>
+		</div>
+		  <!-- Slider -->
+		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+				  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+				  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+				  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+				</ol>
+				<div class="carousel-inner">
+				  <div class="carousel-item active">
+					<img src="img/capitanaMarvel.jpg" class="d-block w-100" alt="...">
+				  </div>
+				  <div class="carousel-item">
+					<img src="img/SpiderManFarFromHome.jpg" class="d-block w-100" alt="...">
+				  </div>
+				  <div class="carousel-item">
+					<img src="img/avengersEndGame.jpeg" class="d-block w-100" alt="...">
+				  </div>
+				</div>
+				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+				  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				  <span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+				  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				  <span class="sr-only">Next</span>
+				</a>
+		</div>
 		</section>
-		<section id="home-view" class="container well row">
+		<section id="home-view" class="container well row hide">
 			<div class="bg-home">
 				<div class="container-movies"></div>
 				<div id="movie-modal" class="modal">

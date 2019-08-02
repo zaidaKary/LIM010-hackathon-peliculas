@@ -2,9 +2,19 @@
 const search = document.getElementById('search');
 
 const allMovies = document.getElementById('home-view');
+const sliderView = document.getElementById('slider-view');
 const phase1 = document.getElementById('phase-1');
 const phase2 = document.getElementById('phase-2');
 const phase3 = document.getElementById('phase-3');
+
+const signOff = document.getElementById('sign-off');
+
+const getIn = document.getElementById('get-in');
+const user = document.getElementById('user');
+const password = document.getElementById('password');
+const passwordError = document.getElementById('password-error');
+const homeView = document.getElementById('home-view');
+const siteHeader = document.getElementById('site-header');
 
 /*Array donde guardo mis peluculas  */
 const objMovies = ['Captain America: The First Avenger', 'Iron Man', 'The Incredible Hulk', 'Iron Man 2', 'Thor', 'The Avengers', 'Iron Man 3',
@@ -33,9 +43,6 @@ for (let i = 0; i < objMovies.length; i++) {
       phase2.addEventListener('click', () => {
         allMovies.innerHTML = showMovies(filterForPhase2(aux));
       });
-
-
-
     })
     .catch(err => (err))
 };
@@ -44,6 +51,7 @@ for (let i = 0; i < objMovies.length; i++) {
 const showMovies = (aux) => {
   let viewMovie = '';
   for (let i in aux) {
+<<<<<<< HEAD
     viewMovie = viewMovie + `
      <div id="printMovies" class="card col-lg-3 col-md-6 col-sm-12">
       <div class="card-body bd-dark style="width = 20rem;">
@@ -52,6 +60,16 @@ const showMovies = (aux) => {
         <h5 id="product-name" >Title: ${aux[i].Title}</h5>
         <h6 id="product-name" >Genre: ${aux[i].Genre}</h6>
         <h6 id="product-name" >Year: ${aux[i].Year}</h6>
+=======
+     viewMovie = viewMovie + `
+     <div id="printMovies" class="col-md-3">
+      <div class="card well text-center">
+        <img src="${aux[i].Poster}" class="card-img-top size" alt="${aux[i].Title}">
+        <div class="card-body">
+          <h5 id="product-name" class="card-title"> ${aux[i].Title}</h5>
+          <h6 id="product-name">(${aux[i].Year})</h6>
+          <h6 id="product-name"><small class="text-muted">${aux[i].Genre}</small></h6>
+>>>>>>> d87d5b9e30b67966c893634fc529336a7ae56532
         </div>
       </div>
      </div>
@@ -69,3 +87,42 @@ const searchMoviesByName = (dataAllMovies, letter) => {
     const movieSought = searchMoviesByName(aux, event.target.value.toLowerCase());
     allMovies.innerHTML = showMovies(movieSought);
   });
+<<<<<<< HEAD
+=======
+
+// Cerrar sesion 
+signOff.addEventListener('click', () => {
+  sliderView.classList.remove('hide');
+});
+
+// Funcionalidad del Boton Ingresar
+let contador = 3;
+getIn.addEventListener('click', () => {
+  if (password.value === '' && user.value === '') {
+    passwordError.innerHTML = '<strong>Por favor, ingrese su usuario y contraseña.</strong>';
+  } else if (password.value === '') {
+    passwordError.innerHTML = '<strong>Por favor, ingrese su contraseña.</strong>';
+    user.value = '';
+  } else if (user.value === '') {
+    passwordError.innerHTML = '<strong>Por favor, ingrese su usuario.</strong>';
+    password.value = '';
+  } else if (user.value === 'LABORATORIA' && password.value === 'LABORATORIA') {
+    sliderView.classList.add('hide');
+    homeView.classList.remove('hide');
+    siteHeader.classList.remove('hide');
+  } else {
+    if (contador === 0) {
+      user.value = '';
+      password.value = '';
+      user.disabled=true;
+      password.disabled=true;
+      passwordError.innerHTML = '<strong>No te quedan más intento(s).</strong>';
+    } else {
+      passwordError.innerHTML = '<strong>Datos incorrectos, le quedan ' + contador + ' intento(s).</strong>';
+      user.value = '';
+      password.value = '';
+      contador--;
+    }
+  }
+});
+>>>>>>> d87d5b9e30b67966c893634fc529336a7ae56532
