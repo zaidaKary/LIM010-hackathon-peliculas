@@ -1,11 +1,18 @@
 //Valor del input buscar
 const search = document.getElementById('search');
 
+const inicio = document.getElementById('inicio');
 const allMovies = document.getElementById('home-view');
 const sliderView = document.getElementById('slider-view');
 const phase1 = document.getElementById('phase-1');
 const phase2 = document.getElementById('phase-2');
 const phase3 = document.getElementById('phase-3');
+const capAmerica = document.getElementById('cap-america');
+const ironMan = document.getElementById('iron-man');
+const theAvenger = document.getElementById('the-avenger');
+const thor = document.getElementById('thor');
+const guardians = document.getElementById('guardians');
+const spider = document.getElementById('spider');
 
 const signOff = document.getElementById('sign-off');
 
@@ -32,16 +39,36 @@ for (let i = 0; i < objMovies.length; i++) {
     .then(data => {
       localStorage.setItem('data', JSON.stringify(data))
       aux.push(data);
+      
       allMovies.innerHTML = showMovies(aux);
       //Funciónes para filtar por Fase
-      phase3.addEventListener('click', () => {
-        allMovies.innerHTML = showMovies(filterForPhase3(aux));
-      });
       phase1.addEventListener('click', () => {
         allMovies.innerHTML = showMovies(filterForPhase1(aux));
       });
       phase2.addEventListener('click', () => {
         allMovies.innerHTML = showMovies(filterForPhase2(aux));
+      });
+      phase3.addEventListener('click', () => {
+        allMovies.innerHTML = showMovies(filterForPhase3(aux));
+      });
+      //Funciones para filtrar por saga
+      capAmerica.addEventListener('click', () => {
+        allMovies.innerHTML = showMovies(filterForSaga(aux,'Captain America'));
+      });
+      ironMan.addEventListener('click', () => {
+        allMovies.innerHTML = showMovies(filterForSaga(aux,'Iron Man'));
+      });
+      theAvenger.addEventListener('click', () => {
+        allMovies.innerHTML = showMovies(filterForSaga(aux,'The Avengers'));
+      });
+      thor.addEventListener('click', () => {
+        allMovies.innerHTML = showMovies(filterForSaga(aux,'Thor'));
+      });
+      guardians.addEventListener('click', () => {
+        allMovies.innerHTML = showMovies(filterForSaga(aux,'Guardians of the Galaxy'));
+      });
+      spider.addEventListener('click', () => {
+        allMovies.innerHTML = showMovies(filterForSaga(aux,'Spider-Man'));
       });
     })
     .catch(err => (err))
@@ -51,16 +78,6 @@ for (let i = 0; i < objMovies.length; i++) {
 const showMovies = (aux) => {
   let viewMovie = '';
   for (let i in aux) {
-<<<<<<< HEAD
-    viewMovie = viewMovie + `
-     <div id="printMovies" class="card col-lg-3 col-md-6 col-sm-12">
-      <div class="card-body bd-dark style="width = 20rem;">
-        <img src="${aux[i].Poster}" class="card-img-top" alt="${aux[i].Title}">
-        <div class="card-body">
-        <h5 id="product-name" >Title: ${aux[i].Title}</h5>
-        <h6 id="product-name" >Genre: ${aux[i].Genre}</h6>
-        <h6 id="product-name" >Year: ${aux[i].Year}</h6>
-=======
      viewMovie = viewMovie + `
      <div id="printMovies" class="col-md-3">
       <div class="card well text-center">
@@ -69,7 +86,6 @@ const showMovies = (aux) => {
           <h5 id="product-name" class="card-title"> ${aux[i].Title}</h5>
           <h6 id="product-name">(${aux[i].Year})</h6>
           <h6 id="product-name"><small class="text-muted">${aux[i].Genre}</small></h6>
->>>>>>> d87d5b9e30b67966c893634fc529336a7ae56532
         </div>
       </div>
      </div>
@@ -87,8 +103,6 @@ const searchMoviesByName = (dataAllMovies, letter) => {
     const movieSought = searchMoviesByName(aux, event.target.value.toLowerCase());
     allMovies.innerHTML = showMovies(movieSought);
   });
-<<<<<<< HEAD
-=======
 
 // Cerrar sesion 
 signOff.addEventListener('click', () => {
@@ -125,4 +139,3 @@ getIn.addEventListener('click', () => {
     }
   }
 });
->>>>>>> d87d5b9e30b67966c893634fc529336a7ae56532
