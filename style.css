@@ -177,8 +177,15 @@ hr.socket {
     border-top: .2rem solid #464545;
     width: 100%;
 }
-
-
+.button{
+    display: flex;
+}
+main {
+    margin-top: 130px;
+}
+.letter-color {
+    color: #e81127 !important;
+}
 /*Utilities*/
 .container {
     width: 98%;
@@ -209,5 +216,8 @@ hr.socket {
     .carousel-item {
         background-size: cover;
         background-position: center center;
+    }
+    main {
+        margin-top: 0px;
     }
 }
