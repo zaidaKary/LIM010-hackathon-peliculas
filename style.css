@@ -10,6 +10,14 @@ body {
     color: #ffffff;
     background-color: #333333;
     margin: 0 auto;
+    font-family: 'Oswald', sans-serif;
+    overflow-x: hidden;
+}
+.offset:before {
+    height: 3.9rem;
+    margin-top: -3.9rem;
+    content: "";
+    display: block;
 }
 h1 {
     color: #ffffff;
@@ -53,22 +61,85 @@ h5 {
     padding-top: 200px;
 }
 .navbar {
-    background-color: #00000057;
+    background: rgb(0, 0, 0, .6)!important;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .9rem;
+    letter-spacing: .1rem;
 }
+.navbar-nav li {
+    padding-right: .7rem;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color:#ffffff;
+    padding-top: .8rem;
+}
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+    color:#e81127;
+}
+.dropdown-menu {
+    background: rgb(0, 0, 0, 10)!important;
+}
+.dropdown-item {
+    color: #ffffff;
+}
+
+.carousel-item {
+    height: 100vh;
+    background-size: cover;
+}
+.carousel-caption {
+    position: absolute;
+    top:38%;
+    text-transform: uppercase;
+    width: 100%;
+    right: 0;
+    left: 0;
+}
+.carousel-caption h1 {
+    font-size: 3.8rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    text-shadow: .1rem .1rem .8rem black;
+    padding-bottom: 1rem;
+}
+.carousel-caption h3 {
+    font-size: 2rem;
+    text-shadow: .1rem .1rem .5rem black;
+    padding-bottom: 1.6rem;
+}
+.btn-lg {
+    border-width: medium;
+    border-radius: 5;
+    font-size: 1.1rem;
+}
+
 .form-control {
     background-color: #ffffff2e;
 }
 
-.card{
+.card {
     background-color: #666666;
-    }
+    transition: transform .5s ease;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+.card img {
+    width: 100%;
+    height: 350px;
+}
+.card:hover {
+    transform: scale(1.1);
+    cursor: zoom-in;
+}
 .card-body{
     background-color: #484747;
 }
 
-.hide {
+/*.hide {
     display: none;
-}
+}*/
 
 .color-label {
     color: black;
@@ -85,6 +156,34 @@ h5 {
     margin-right: 13px;
     margin-top: 13px;
 }
+
+footer {
+    background-color: #2E2E2E;
+    color:#ffffff;
+    padding: 1rem 0 1rem;
+    margin-top: 1rem;
+}
+
+footer img {
+    height: 3rem;
+    margin: 1.5rem 0;
+}
+footer a {
+    color: #ffffff;
+}
+footer svg.svg-inline--fa {
+    font-size: 1.6rem;
+    margin:1.2rem .5rem 0 0;
+}
+footer svg.svg-inline--fa {
+    color: #e81127;
+}
+hr.socket {
+    border-top: .2rem solid #464545;
+    width: 100%;
+}
+
+
 /*Utilities*/
 .container {
     width: 98%;
@@ -99,18 +198,21 @@ h5 {
   }
 
 /*Responsive*/
-@media only screen and (min-width:960px) {
-    #printMovies .col-md-3 .well {
-        height: 250px;
+@media only screen and (max-width:767px) {
+    .carousel-caption h1 {
+        font-size: 2.3rem;
+        letter-spacing: .15rem;
+        padding-bottom: .5rem;
     }
-    #printMovies .col-md-3 img {
-        height: 250px;
+    .carousel-caption h3 {
+        font-size: 1.2rem;
+        padding-bottom: 1.2rem;
     }
-}
-
-@media only screen and (min-width:320px) and (max-width:768px) {
-    .navbar {
-        background-color: #000000a8;
+    .btn-lg {
+        font-size: 1rem;
     }
-
+    .carousel-item {
+        background-size: cover;
+        background-position: center center;
+    }
 }
