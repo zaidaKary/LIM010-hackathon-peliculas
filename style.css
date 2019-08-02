@@ -35,12 +35,18 @@ h3 {
     font-weight: 400;
     text-shadow: 1px 2px 2px rgba(51,51,51,0.91);
 }
+h5 {
+    font-family: 'Oswald', sans-serif;
+}
+.text-muted {
+    color: #928f8f!important;
+}
 
 .site-header {
     margin: 0 auto;
     background-image: url(img/bg-home-1.jpg);
-    height: 100vh;
-    background-position: top center;
+    height: 600px;
+    background-position: center;
     background-size: cover;
   }
 .text-header {
@@ -53,10 +59,37 @@ h3 {
     background-color: #ffffff2e;
 }
 
+.card{
+    background-color: #666666;
+    }
+.card-body{
+    background-color: #484747;
+}
+
+/*.hide {
+    display: none;
+}
+*/
+.color-label {
+    color: black;
+}
+.margin-input {
+    margin-bottom: 18px;
+}
+.modal-title {
+    color: black;
+}
+.button-home {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 13px;
+    margin-top: 13px;
+}
 /*Utilities*/
 .container {
     width: 98%;
     margin: 0 auto;
+    padding: 50px 0 50px 0;
   }
  
   .center-text {
@@ -64,3 +97,20 @@ h3 {
     max-width: 700px;
     margin: 15px auto 10px;
   }
+
+/*Responsive*/
+@media only screen and (min-width:960px) {
+    #printMovies .col-md-3 .well {
+        height: 250px;
+    }
+    #printMovies .col-md-3 img {
+        height: 250px;
+    }
+}
+
+@media only screen and (min-width:320px) and (max-width:768px) {
+    .navbar {
+        background-color: #000000a8;
+    }
+
+}
