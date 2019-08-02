@@ -130,7 +130,7 @@ const paintAno = (listMovie) => {
 const paintListAno = (data, container) => {
   let template = '';
   for (let i = 0; i < data.length; i++) { 
-    template += `<div class="button"><button style="margin-left: 11px;" class="btn btn-info" type="sumit" onclick="anio(${data[i]})" id="${data[i]}" value="${data[i]}"> ${data[i].toUpperCase()}</button><div>`;    
+    template += `<div class="button"><button class="btn btn-info" type="sumit" onclick="anio(${data[i]})" id="${data[i]}" value="${data[i]}"> ${data[i].toUpperCase()}</button><div>`;    
   }
   container.innerHTML = template;
 };
