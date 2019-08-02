@@ -34,7 +34,7 @@ const objMovies = ['Captain America: The First Avenger', 'Iron Man', 'The Incred
 let aux = [];
 let movie;
 for (let i = 0; i < objMovies.length; i++) {
-  movie = `http://www.omdbapi.com/?t=${encodeURI(objMovies[i])}&apikey=1aca2bd9`;
+  movie = `https://www.omdbapi.com/?t=${encodeURI(objMovies[i])}&apikey=1aca2bd9`;
   fetch(movie)
     .then(response => response.json())
     .then(data => {
