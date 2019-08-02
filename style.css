@@ -80,9 +80,10 @@ h5 {
 }
 .dropdown-menu {
     background: rgb(0, 0, 0, 10)!important;
+    color:#fff;
 }
-.dropdown-item {
-    color: #ffffff;
+.dropdown-item a:hover {
+    color: #000;
 }
 
 .carousel-item {
@@ -139,13 +140,8 @@ h5 {
 
 /*.hide {
     display: none;
-<<<<<<< HEAD
 }*/
 
-=======
-}
-*/
->>>>>>> 22fd9f60ebe20452d863b169e13387c297a1aff5
 .color-label {
     color: black;
 }
