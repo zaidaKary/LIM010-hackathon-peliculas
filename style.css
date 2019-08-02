@@ -139,8 +139,13 @@ h5 {
 
 /*.hide {
     display: none;
+<<<<<<< HEAD
 }*/
 
+=======
+}
+*/
+>>>>>>> 22fd9f60ebe20452d863b169e13387c297a1aff5
 .color-label {
     color: black;
 }

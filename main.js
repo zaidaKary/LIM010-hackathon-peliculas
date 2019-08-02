@@ -2,6 +2,7 @@
 const search = document.getElementById('search');
 
 const allMovies = document.getElementById('home-view');
+const selectAnoEstreno = document.getElementById('select-ano');
 const sliderView = document.getElementById('slider-view');
 const phase1 = document.getElementById('phase-1');
 const phase2 = document.getElementById('phase-2');
@@ -43,8 +44,18 @@ for (let i = 0; i < objMovies.length; i++) {
       phase2.addEventListener('click', () => {
         allMovies.innerHTML = showMovies(filterForPhase2(aux));
       });
+      // Funcion para mostrar los tipos
+      const anoEstreno=paintAno(aux);
+      paintListAno(anoEstreno, selectAnoEstreno);
+
+      // Funcion de prueba para botones de año
+      const selectMenuAge=document.getElementById("select-age");
+      selectMenuAge.addEventListener('click', () => {
+      let newListMovie =  paintListAno(anoEstreno, allMovies);
+      });
     })
     .catch(err => (err))
+    
 };
 
 // Función para mostrar todas las peliculas.
@@ -112,3 +123,43 @@ getIn.addEventListener('click', () => {
     }
   }
 });
+
+
+// Funcion para pintar  los años
+const paintAno = (listMovie) => {
+  let newData = [];
+  for (let i = 0; i < listMovie.length; i++) {
+      newData[i] = listMovie[i].Year;
+  }
+  const listType = [... new Set(newData)];
+  const listAgeShort=listType.sort();
+  return listAgeShort;
+};
+
+
+// Funcion para pintar los años en el combobox
+const paintListAno = (data, container) => {
+  let template = '';
+  for (let i = 0; i < data.length; i++) { 
+    template += `<button type="sumit" onclick="anio(${data[i]})" id="${data[i]}" value="${data[i]}"> ${data[i].toUpperCase()}</button>`;    
+  }
+  container.innerHTML = template;
+};
+
+
+// Función de filtrar por tipo
+const filterAge = (allListMovie, ageEstren) => {
+  let arrayMovie = [];
+  for (let i = 0; i < allListMovie.length; i++) {
+      if (allListMovie[i].Year == ageEstren) {
+        arrayMovie.push(allListMovie[i]);  
+      } 
+  }
+  return arrayMovie;
+};
+
+// Funcion para mostrar el filtro del año
+function anio(id){
+  let resultFilterAge = filterAge(aux, id);
+  allMovies.innerHTML = showMovies(resultFilterAge)
+};
