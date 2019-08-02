@@ -75,15 +75,16 @@ for (let i = 0; i < objMovies.length; i++) {
         allMovies.innerHTML = showMovies(filterForSaga(aux,'Spider-Man'));
       });
       // Funcion para mostrar los tipos
-     const anoEstreno=paintAno(aux);
-     paintListAno(anoEstreno, selectAnoEstreno);
-     // Funcion de prueba para botones de año
-     const selectMenuAge=document.getElementById("select-age");
-     selectMenuAge.addEventListener('click', () => {
-     let newListMovie =  paintListAno(anoEstreno, allMovies);
-     });
-    })
-    .catch(err => (err))
+      const anoEstreno=paintAno(aux);
+      paintListAno(anoEstreno, selectAnoEstreno);
+
+      // Funcion de prueba para botones de año
+      const selectMenuAge=document.getElementById("select-age");
+      selectMenuAge.addEventListener('click', () => {
+      let newListMovie =  paintListAno(anoEstreno, allMovies);
+      });
+          })
+          .catch(err => (err))
     
 };
 
