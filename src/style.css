@@ -80,9 +80,10 @@ h5 {
 }
 .dropdown-menu {
     background: rgb(0, 0, 0, 10)!important;
+    color:#fff;
 }
-.dropdown-item {
-    color: #ffffff;
+.dropdown-item a:hover {
+    color: #000;
 }
 
 .carousel-item {
@@ -117,6 +118,7 @@ h5 {
 
 .form-control {
     background-color: #ffffff2e;
+    color: #ffffff;
 }
 
 .card {
@@ -198,6 +200,12 @@ main {
     max-width: 700px;
     margin: 15px auto 10px;
   }
+
+  .btn-info {
+    color: #fff;
+    background-color: #e81127;
+    border-color: #e81127;
+}
 
 /*Responsive*/
 @media only screen and (max-width:767px) {
