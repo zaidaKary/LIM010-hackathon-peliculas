@@ -107,8 +107,6 @@ const showMovies = (aux) => {
   return (viewMovie);
 };
 
-console.log(showMovies(aux));
-
 const searchMoviesByName = (dataAllMovies, letter) => {
     return dataAllMovies.filter(objeto => objeto.Title.toLowerCase().startsWith(letter));
   };
