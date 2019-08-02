@@ -1,100 +1,116 @@
-# "Hackathon" de final de _Common Core_
+# MARVEL FANS
 
 ## Índice
 
-* [Preámbulo](#preámbulo)
-* [Resumen del proyecto](#resumen-del-proyecto)
-* [Consideraciones generales](#consideraciones-generales)
-* [Objetivos de aprendizaje](#objetivos-de-aprendizaje)
-* [Parte obligatoria](#parte-obligatoria)
-* [Consideraciones técnicas](#consideraciones-técnicas)
+- [Índice](#índice)
+- [Resumen del proyecto](#resumen-del-proyecto)
+- [Imagen del proyecto](#imagen-del-proyecto)
+- [Investigación UX](#investigacion-ux)
+  - [Usuario](#usuario)
+    - [Historias de Usuario](#historias-de-usuario)
+  - [Objetivos del proyecto](#objetivos-del-proyecto)
+  - [Soluciona los problemas / necesidades del usuario](#soluciona-los-problemas-necesidades-del-usuario)
+  - [Prototipo baja fidelidad](#prototipo-baja-fidelidad)
+  - [Feedback](#feedback)
+  - [Prototipo alta fidelidad](#prototipo-en-figma)
 
- ***
-
-## Preámbulo
-
-Con la aparición de plataformas para ver películas en la nube, como Netflix o
-Hulu, ver películas desde donde estés, comiendo lo que quieras
-(sin tener que pagar precios ridículos por pop-corn / pipoca / palomitas /
-canchita / cabritas), parando si es necesario, teniendo acceso a una cantidad
-abrumadora de películas... ha cambiado la experiencia del usuario
-y modificado el mercado de las películas a nivel global.
-
- ![Pelis](https://media.giphy.com/media/NipFetnQOuKhW/giphy.gif)
+***
 
 ## Resumen del proyecto
 
-Durante estos días crearán el producto que ustedes deseen alrededor del mundo
-de las películas. Puede ser un sitio que hable de las mejores películas
-latinoamericanas, uno que recomiende las películas recién estrenadas en Netflix,
-uno de pelis de terror... o... ¡lo que quieran!
+Se realizará una aplicación web que permita consultar la información relevante sobre el UCM (Universo cinematográfico de Marvel). La consulta incluirá la información de las películas de la franquicia Marvel estreanadas hasta la actualidad. También, el usuario podrá acceder a las opciones de filtrar las películas por fecha de estreno, saga de cada super heroe y fases cronológicas segun la línea de tiempo de las películas.
 
-## Consideraciones generales
+## Imagen del proyecto
+![img-01](img-rm/img-001.jpg)
+## Investigación UX
 
-* Este proyecto se debe resolver en equipos de hasta 4 personas.
-* Usa la API de [OMDB](http://www.omdbapi.com/) (The Open Movie Database).
-* Tiempo para completar el reto: 3 días.
+### Usuario
 
-## Objetivos de aprendizaje
+El usuario objetivo son los fans del UCM (Universo Cinematográfico de Marvel), seguidores de todas las sagas de super heroes.
 
-* Enfrentarse a un reto de corta duración en el que pongan en práctica todo
-lo aprendido hasta ahora.
-* Que sigan desarrollando sus habilidades de trabajo en equipo. Mientras más
-personas en un equipo de trabajo, mayor complejidad para: tener un entendimiento
-común, seguir el flujo de trabajo, buscar consensos, etc.
+- Para la realización del proyecto se recurrio al testeo con un usuario.
+- El usuario es seguidor de las películas realizadas por Marvel basadas en sus super heroes.
+- Se le consulto cual es la información más importante que ellos necesitan encontrar en el aplicativo.
+- En base al primer testeo se les presento el prototipo de baja fidelidad, donde nos señalaron los elementos que identificaron. De acuerdo a estos comentarios, se decidio realizar cambios y mejoras para realizar el primer demo.
+- En la segunda revisión del demo se realizaron algunas acciones para identificar la información mas relevante.
+- También se obtuvo feeback del squad y compañeras de otros equipos.
 
-## Parte Obligatoria
+#### Historias de Usuario
 
-* Todo el planeamiento del trabajo deberá ser detallado en un repositorio único
-por _squad_ en el que se presente el _planning_ (_project_ de Github).
-* El `README` debe contener un resumen de qué trata el proyecto, el _research_ 
-y los _sketches_.
-* El proyecto deberá presentarse publicado en github pages (no se aceptará 
-demos en local)
+#### SPRINT 1
+>Historia 1: Como usuario quiero  visualizar toda las películas del "UCM Marvel" para poder ver la información de cada una de ellas.
+#### Criterio de aceptación.
+- [x] El usuario al ingresar a la pagina web pueda visualizar  la lista de películas de "Avengers".
+- [x] El usuario por cada pagina pueda visualizar solo 6 películas.
+- [x] El usuario pueda visualizar por cada película el nombre y la portada de la película.
+- [x] El usuario pueda hacer clic en la película y se muestra la ventana modal.
+- [x] El usuario puede visualizar la información básica en la ventana modal(Titulo, genero, duración, año de estreno, actores, director y sinopsis).
+- [x] La ventana modal tenga la opción de cerrar.
 
-## Consideraciones técnicas
+>Historia 2: Como usuario quiero  realizar la búsqueda por el titulo de la película para ubicar a la película en menos tiempo.
+#### Criterio de aceptación.
+- [x] El usuario tenga la opción de un buscador en la parte superior derecho.
+- [x] El usuario al ir ingresando letra por letra se valla realizando el filtro de titulo de la película.
+- [x] El usuario al hacer clic en la película se muestra ventana modal con la información básica.
+- [x] El usuario el texto que ingresa se debe visualizar en mayúscula.
+- [x] La ventana modal tenga la opción de cerrar.
 
-* El diseño visual de los componentes es de libre elección de ustedes,
-sin embargo, si no quieren crearlo desde cero, pueden utilizar el que
-propuso [Walmart](https://drive.google.com/file/d/0B6GBtl-gO6LwaVprQkFqTGI2a28/view).
-* Tienen libertad de utilizar las tecnologías que deseen (framework de CSS, 
-plugins, etc).
+>Historia 3: Como usuario quiero  filtrar  las películas de "Marvel"  por año de estreno para ubicar a la película en un año especifico.
 
-## Horario
+#### Criterio de aceptación
+- [x] El usuario tenga la opción la opción de filtrar las películas de "Marvel"  por un año especifico.
+- [x] El usuario al seleccionar un año especifico se muestre la película respectivo en un modal.
+- [x] El usuario debe visualizar la información básica en la ventana modal. 
+- [x] La ventana modal tenga la opción de cerrar.
 
-|       | Miércoles               | Jueves                       | Viernes                 | 
-|------ | ------------------------| ---------------------------- | ----------------------- | 
-| 8:00  | Kick off hackaton       | Daily por squad              | Hacking                 |      
-| 9:00  | Sesión de planificación | Hacking                      | Hacking                 | 
-| 10:00 | Hacking                 | Compartir link de aplicación | Detalles finales        |
-| 11:00 |                         | Presentación y Feedback      | Feria de demostraciones |    
-| 12:00 |                         |                              | Deliberación            |                  
+>Historia 4: Como usuario quiero filtrar las películas de "Avengers" por actores para ver la información de la película que participa cierto actor.
 
-## Tips para la organización de trabajo entre UX y Front end 
+#### Criterio de aceptación
+- [x] El usuario tenga la opción de seleccionar el filtro por "Actores"  en el menú superior derecho.
+- [x] El usuario al seleccionar "Actores" se visualice las imágenes de los actores.
+- [x] El usuario al seleccionar un actor especifico se muestre una ventana modal con la información básica de la película.
+- [x] La ventana modal tenga la opción de cerrar.
 
-* Las UX y FE entienden en conjunto el reto en el que van a trabajar, se 
-organizan y arman sus primeros bocetos.
-* Con los primeros bocetos/ideas, las FE pasan a crear su ambiente de desarrollo
-y a crear componentes atómicos que luego les sea fácil personalizar con CSS y 
-utilizar para crear interfaces más complejas. Además, las FE empiezan también a 
-trabajar en la lógica de la aplicación. Mientras tanto, las UX crean una guía de 
-estilos, los flujos de usuarios, hacen un prototipo más completo y lo testean.
-* Las UX comparten el prototipo testeado, para que el equipo empiece a personalizar 
-los componentes y a ponerlos en conjunto.
-* Las UX hacen QA y testing con los releases que vayan haciendo las FE.
-* Deberán tener en el planning, historias de usuario, criterios de aceptación y 
-definición de terminado.
-* Usen las ceremonias ágiles para saber en que van como equipo, dailys y 
-retrospectivas diarias son esenciales.
-* Iteren, iteren, iteren.
 
-## ¿Qué es la Feria de demos?
+### Objetivos del proyecto
 
-La feria de demos se realizará el día viernes, consiste en la dinámica de “speed dating”, 
-cada squad presentará su demo durante 3 minutos a un grupo de personas. Luego de los 3 
-minutos sonará una alarma y el grupo de personas rotará al siguiente squad, de esta forma 
-deberán presentar durante una hora. 
+El objetivo es desarrollar una aplicación web que sea utilizada por los seguidores y fanaticos de las películas de Marvel basadas en sus super heroes y comics, para consultar la información relevante para ellos. 
 
-* Las demos no deben durar más de 3 minutos y deben mostrar el producto y las tecnologías 
-usadas.
+### Soluciona los problemas / necesidades del usuario
+
+El usuario necesita consultar la información de las películas de Marvel en fase cronológica, saga o fecha de estreno para reconocer cuales son las películas que ha visto o le falta ver. También, necesita conocer todos los detalles de las películas.
+
+### Prototipo baja fidelidad
+
+![img-01](img-rm/img-01.jpeg)
+
+![img-02](img-rm/img-02.jpeg)
+
+### Feedback
+
+En el feedback realizado se indicó:
+
+- En el primer demo se sugirio trabajar con una sola vista.
+
+- En el testeocon el usuario, se propuso que solo se mostranran en la pantalla principal en el card de la película la información de título, fecha y genero respectivamente.
+
+- El usuario también propusieron que el menú y los filtros se deberian mostrar siempre para facilitar las busqueda, para ello se creo un menú pegajoso.
+
+### Prototipo alta fidelidad
+
+#### Desktop Home
+
+
+
+#### Dispositivo Mobile
+
+
+
+#### Dispositivo Tablet
+
+
+
+
+
+
 
