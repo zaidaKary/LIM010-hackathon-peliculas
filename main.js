@@ -80,7 +80,7 @@ for (let i = 0; i < objMovies.length; i++) {
      // Funcion de prueba para botones de año
      const selectMenuAge=document.getElementById("select-age");
      selectMenuAge.addEventListener('click', () => {
-     let newListMovie =  paintListAno(anoEstreno, allMovies);
+      paintListAno(anoEstreno, allMovies);
      });
     })
     .catch(err => (err))
@@ -116,44 +116,6 @@ const searchMoviesByName = (dataAllMovies, letter) => {
     const movieSought = searchMoviesByName(aux, event.target.value.toLowerCase());
     allMovies.innerHTML = showMovies(movieSought);
   });
-
-// Cerrar sesion 
-signOff.addEventListener('click', () => {
-  sliderView.classList.remove('hide');
-});
-
-// Funcionalidad del Boton Ingresar
-let contador = 3;
-getIn.addEventListener('click', () => {
-  if (password.value === '' && user.value === '') {
-    passwordError.innerHTML = '<strong>Por favor, ingrese su usuario y contraseña.</strong>';
-  } else if (password.value === '') {
-    passwordError.innerHTML = '<strong>Por favor, ingrese su contraseña.</strong>';
-    user.value = '';
-  } else if (user.value === '') {
-    passwordError.innerHTML = '<strong>Por favor, ingrese su usuario.</strong>';
-    password.value = '';
-  } else if (user.value === 'LABORATORIA' && password.value === 'LABORATORIA') {
-    sliderView.classList.add('hide');
-    homeView.classList.remove('hide');
-    siteHeader.classList.remove('hide');
-  } else {
-    if (contador === 0) {
-      user.value = '';
-      password.value = '';
-      user.disabled=true;
-      password.disabled=true;
-      passwordError.innerHTML = '<strong>No te quedan más intento(s).</strong>';
-    } else {
-      passwordError.innerHTML = '<strong>Datos incorrectos, le quedan ' + contador + ' intento(s).</strong>';
-      user.value = '';
-      password.value = '';
-      contador--;
-    }
-  }
-});
-
-
 // Funcion para pintar  los años
 const paintAno = (listMovie) => {
   let newData = [];
